@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon</title>
+</head>
+<body>
+  <h1>POKEMON ELIXIR FOX</h1>
+  <form action="/" method="POST">
+    <input type="text" name="name" placeholder="name"><br>
+    <input type="text" name="type" placeholder="type"><br>
+    <input type="submit">
+  </form><br>
+  <table border>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Type</th>
+    </tr>
+    <% for (let i = 0; i < pokemons.length; i++) { %>
+    <tr>
+      <td><%= pokemons[i].id %></td>
+      <td><%= pokemons[i].name %></td>
+      <td><%= pokemons[i].type %></td>
+    </tr>
+    <% } %>  
+  </table>
+</body>
+</html>
